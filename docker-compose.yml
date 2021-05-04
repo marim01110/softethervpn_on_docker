@@ -1,0 +1,12 @@
+version: '2'
+services:
+  softether-vpn:
+    build: .
+    container_name: softether-vpn
+    restart: unless-stopped
+    ports:
+      - 500:500/udp
+      - 1701:1701/udp
+      - 4500:4500/udp
+      - 5555:5555/tcp
+    privileged: true
